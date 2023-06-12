@@ -45,13 +45,14 @@
 
         <!-- Tweets -->
         <div id="tweetCards">
+            <h1 class="mt-5 text-center tweet-wrap" style="border-radius:20px"">Perfil {{ user.first_name }}</h1>
             <!-- FOR LOOP HERE -->
             {% for post in posts %}
             <div class="tweet-wrap" style="border-radius:20px">
                 <div class="tweet-header">
                     <img src="{{ user.profile.image.url }}" alt="" class="avator">
                     <div class="tweet-header-info">
-                        {{ post.user.first_name}} <span>@{{ post.user }}</span><span>{{ post.timestamp|naturaltime }}
+                        {{ post.user.first_name }} <span>@{{ post.user }}</span><span>{{ post.timestamp|naturaltime }}
                         </span>
                         <p>{{ post.content }}</p>
                     </div>
